@@ -21,6 +21,7 @@ html,
 body {
     height: 100%;
     width: 100%;
+    background-color: #fdfaf5;
 }
 
 nav{
@@ -28,111 +29,197 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 70%;
+    width: 90%;
+    height: 60px;
     position: fixed;
     padding: 15px 30px;
     border-radius: 50px;
     top: 2%;
     left: 50%;
     transform: translateX(-50%);
+    /* margin-top: 1vw; */
+    z-index: 10;
+}
+nav{
+    padding-right: 2px;
 }
 nav .part2{
     display: flex;
-    gap: 40px;
+    gap: 45px;
     align-items: center;
 }
 nav a{
     font-family: wow;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 19px;
     font-weight: 600;
-color: #111;
+color: #333;
 }
 nav button{
-    padding: 13px 20px;
+    padding: 12px 30px;
     border: none;
     background-color: #70a2e1;
     font-family: wow;
     color: #fff;
     font-size: 18px;
+    font-weight: 600;
     border-radius: 50px;
+}
+nav img{
+    height: 80%;
 }
 
 #page1{
     height: 100vh;
     width: 100%;
     background-color: #fdfaf5;
-    padding: 2% 16%;
-    padding-top: 10%;
+    /* padding: 2% 16%; */
+    padding-top: 8%;
 
 }
-#page2{
-    height: 100vh;
-    width: 100%;
-    background-color: #222;
-}
+
 #page3{
     height: 100vh;
     width: 100%;
     background-color: #333;
+    
 }
 
 #page1Bottom{
     display: flex;
     align-items: center;
-    height: 25%;
+    height: 35%;
     margin-top: 0vw;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 2% 6%;
+    /* background-color: rebeccapurple; */
+    gap: 85px;
 }
 #page1Bottom div{
-    width: 50%;
+    width: 40%;
 }
 #page1Bottom h1{
-    font-size: 6.5vw;
+    font-size: 9vw;
     color: #333;
 }
 #page1Bottom div h3{
-    font-size: 1.2vw;
-    margin-bottom: 0.5vw;
+    font-size: 2.5vw;
+    margin-bottom: 0.2vw;
 }
 #page1Bottom div p{
-    font-size: 0.8vw;
+    font-size: 1.1vw;
     opacity: 0.6;
     
 }
 
 
 #coding{
-    height: 75%;
-    background-color: rgb(230, 233, 243);
+    height: 70%;
+    width: 100vw;
+    /* background-color: rgb(230, 233, 243); */
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    gap: -50px;
+    align-items: center;
+    justify-content: center;  
     overflow: hidden;
+    padding-left: 100px;
+    padding-right: 100px;
+    /* background-color: red; */
+    background-color:#FDFAF5;
+    padding: 2% 16%;
     
 }
 
+/* #coding #letter-c .flower  {
+    left: 2vw;
+    
+}
+#coding #letter-o {
+    left: 12vw;
+    top: 1vw;
+}
+#coding #letter-d {
+    left: 22vw;
+    top: 1vw;
+}
+#coding #letter-i {
+    left: 31vw;
+    top: 1vw;
+}
+#coding #letter-n {
+    padding-right: 8vw;
+    left: 40vw;
+    top: 1vw;
+   
+}
+
+#coding #letter-g {
+    left: 52vw;
+    top: 1vw;
+}
+
+
+#coding .stem #letter-c {
+    left: 2vw;
+    top: 1vw;
+}
+#coding .stem #letter-o {
+    left: 12vw;
+    top: 1vw;
+}
+#coding .stem #letter-d {
+    left: 22vw;
+    top: 1vw;
+}
+#coding .stem #letter-i {
+    left: 31vw;
+    top: 1vw;
+}
+#coding  #letter-n .stem {
+    padding-right: 8vw;
+    left: 30vw;
+    top: 1vw;
+   
+}
+
+#coding .stem #letter-g {
+    left: 52vw;
+    top: 1vw;
+} */
+
+
+
+
 .letter{
     margin-bottom: -100px;
-    /* background-color: royalblue; */
+  /* /  background-color: royalblue; */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    position: relative;
+    /* background-color: red; */
+    /* background-color: red; */
+    gap: -50px;
+    margin-left: -20px;
+    /* overflow: hidden; */
+    
+  
 }
 #letter-n .flower{
-    margin-bottom: -100px;
+    margin-bottom: -115px;
     
 }
 .flower{
     /* background-color: red; */
     transform-origin: 50% 90%;
     margin-bottom: -25px;
+    /* position: absolute; */
+    
 }
 .stem{
     /* background-color: red; */
     overflow: hidden;
     padding: 1px;
+    /* position: absolute; */
+   
     
 
 }
@@ -141,6 +228,7 @@ nav button{
     margin-top: -10%;
     position: relative;
     margin-top: 10px;
+ 
     
     
 }
@@ -149,4 +237,134 @@ nav button{
     stroke: black;
     fill: none;
     stroke-width: 3.5px;
+}
+#letter-i .flower{
+    margin-left: 60px;
+}
+#letter-i .stem{
+    padding-right: 30px;
+
+}
+/* aligning elements according to gap between them  */
+#coding #letter-o{
+    margin-left: -2vw;
+    z-index: 2;
+}
+#coding #letter-c{
+    z-index: 1;
+}
+#coding #letter-d {
+    margin-left: -4vw;
+    z-index: 3;
+}
+#coding #letter-i {
+    margin-left: -4vw;
+    z-index: 4;
+}
+#coding #letter-n {
+    margin-left: -9vw;
+    z-index: 5;
+}
+#coding #letter-g {
+    margin-left: -9vw;
+    z-index: 6;
+}
+#coding #letter-c{
+    align-items: center;
+    
+}
+
+#coding #letter-c .stem{
+   margin-right: 50px;
+   margin-bottom: 5px;
+    
+}
+#page2{
+    height: 120vh;
+    width: 100%;
+    background-color: #fdfaf5;
+    padding: 2% 6%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vw;
+    
+}
+.page2-part1{
+    height: 100%;
+    width: 50%;
+}
+
+.page2-part1 .part1-top{
+    height: 15vw;
+    padding-top: 10vw;
+    position: relative;
+    /* background-color: rebeccapurple; */
+}
+.page2-part1 .part1-top .blue{
+    background-color: #3c61e5;
+    height: 5vw;
+}
+.page2-part1 .part1-top .eye{
+    background-color: #3658d4;
+    position: absolute;
+    height: 24vw;
+    width: 24vw;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%,0);
+    bottom: -13vw;
+}
+
+.page2-part1 .video-div{
+    background-color: #ffd47e;
+    position: relative;
+    height:calc(100% - 12vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4vw;
+}
+.page2-part1 .video-div video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.page2-part2{
+    height: 100%;
+    width: 50%;
+    /* background-color: crimson; */
+}
+
+.page2-part2 .part2-top{
+    background-color: #ffbbba;
+    height: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vw;
+    border-top-left-radius: 100px;
+}
+.page2-part2 .part2-top h3{
+    font-size: 3.2vw;
+    line-height: 1;
+    color: #333;
+}
+
+.page2-part2 .part2-bottom{
+    background-color: white;
+    height: calc(100% - 12vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5vw;
+}
+.page2-part2 .part2-bottom h4{
+    font-size: 1.8vw;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #333;
 }
