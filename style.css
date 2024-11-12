@@ -78,12 +78,6 @@ nav img{
 
 }
 
-#page3{
-    height: 100vh;
-    width: 100%;
-    background-color: #333;
-    
-}
 
 #page1Bottom{
     display: flex;
@@ -280,7 +274,7 @@ nav img{
     
 }
 #page2{
-    height: 120vh;
+    height: 130vh;
     width: 100%;
     background-color: #fdfaf5;
     padding: 2% 6%;
@@ -291,29 +285,32 @@ nav img{
     
 }
 .page2-part1{
-    height: 100%;
+    height: 90%;
     width: 50%;
 }
 
 .page2-part1 .part1-top{
     height: 15vw;
-    padding-top: 10vw;
+    padding-top: 7vw;
     position: relative;
     /* background-color: rebeccapurple; */
+    /* background-color: red; */
 }
 .page2-part1 .part1-top .blue{
     background-color: #3c61e5;
-    height: 5vw;
+    height:10vw;
+   
 }
 .page2-part1 .part1-top .eye{
     background-color: #3658d4;
     position: absolute;
-    height: 24vw;
-    width: 24vw;
+    height: 30vw;
+    width: 30vw;
     border-radius: 50%;
     left: 50%;
     transform: translate(-50%,0);
-    bottom: -13vw;
+    bottom: -15vw;
+    /* overflow: hidden; */
 }
 
 .page2-part1 .video-div{
@@ -324,11 +321,35 @@ nav img{
     align-items: center;
     justify-content: center;
     padding: 4vw;
+    border-bottom-right-radius: 75px;
 }
 .page2-part1 .video-div video{
     height: 100%;
-    width: 100%;
+    width: 90%;
     object-fit: cover;
+    /* transition: all ease 0.6s; */
+}
+
+
+.page2-part1 .video-div .play{
+    background-color: #3658d4;
+    color: #ffbbba;
+    height: 5.5vw;
+    width: 5.5vw;
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+}
+.page2-part1 .video-div .play i{
+    font-size: 2.3vw;
+}
+.page2-part1 .video-div img{
+    position: absolute;
+    top: 82%;
+    right: -16.5%;
 }
 
 .page2-part2{
@@ -361,10 +382,47 @@ nav img{
     padding: 5vw;
 }
 .page2-part2 .part2-bottom h4{
-    font-size: 1.8vw;
+    font-size: 2.5vw;
+    width: 100%;
+}
+.page2-part2 .part2-bottom img{
+    height: 25px;
+    color: #ffbbba;
+    background-color: #ffbbba;
 }
 #page3{
     height: 100vh;
     width: 100%;
     background-color: #333;
+}
+.eyeball{
+    width: 12vw;
+    height: 6vw;
+    background-color:#fff;
+     position: absolute;
+    top: 20%;
+    left: 30%; 
+    border-radius: 150%;
+    overflow: hidden;
+    
+}
+.pupil{
+    flex-shrink: 0;
+    height: 6vw;
+    width: 6vw;
+    background-color: #ffd47e;
+    border-radius: 50%;
+    position: relative;
+    left: 20%;
+}
+#pupil1{
+    background-color: #ffbbba;
+    margin-bottom:30px;
+    margin-top: -40px;
+    
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: #FDFAF5;
 }

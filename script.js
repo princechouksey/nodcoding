@@ -14,7 +14,7 @@ function navAnimation() {
     })
 }
 
-// navAnimation()
+
 
 function codingAnimation() {
 
@@ -79,4 +79,59 @@ function codingAnimation() {
     }, 100)
 
 }
- codingAnimation()
+
+
+function page2animation() {
+    var eyeball = document.querySelector(".eyeball")
+
+document.querySelector("#page2").addEventListener("mousemove", function(dets){
+    var seeX = (dets.x - eyeball.getBoundingClientRect().x)/50
+    var seeY = (dets.y - eyeball.getBoundingClientRect().y)/50
+    console.log(seeX)
+    console.log(seeY)
+   
+    gsap.to(".pupil",{
+        transform:`translate(${seeX}% , ${seeY}%)`
+
+    })
+
+})
+var pupilNumber= 0
+document.querySelector('.eye', function(){
+    if(pupilNumber ==0){
+        gsap.to('#pupil1',{
+            marginTop:'-210px',
+            duration:0.5
+        })
+        pupilNumber =1;
+    }
+    else {
+        gsap.to('#pupil1', {
+            marginTop: '-40px',
+            duration: 0.5
+        })
+        pupilNumber = 0
+    }
+})
+
+var videoPlay = 0;
+var video = document.querySelector(".video-div video")
+
+    document.querySelector(".video-div").addEventListener("click", function () {
+        if (videoPlay == 0) {
+            document.querySelector(".page2-part1 .video-div .play").style.display = 'none'
+            video.play()
+            videoPlay++
+        } else {
+            document.querySelector(".page2-part1 .video-div .play").style.display = 'flex'
+            video.pause()
+
+            videoPlay--
+        }
+    })
+
+}
+// navAnimation()
+//  codingAnimation()
+// page2animation()
+
