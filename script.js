@@ -131,43 +131,70 @@ var video = document.querySelector(".video-div video")
     })
 
 }
-// navAnimation()
-//  codingAnimation()
-// page2animation()
+navAnimation()
+ codingAnimation()
+page2animation()
 
+function page3Page4Animation() {
 
-var num = 0
+    var num = 0
 
-var int
+    var int
 
-function userRating() {
-    int = setInterval(function () {
-        if (num < 49) {
-            num += 1
-            document.querySelector('#user-review1 .rating h2 span').innerHTML = num / 10
-            document.querySelector('#user-review3 .rating h2 span').innerHTML = num / 10
+    function userRating() {
+        int = setInterval(function () {
             if (num < 49) {
-                document.querySelector('#user-review2 .rating h2 span').innerHTML = num / 10
+                num += 1
+                document.querySelector('#user-review1 .rating h2 span').innerHTML = num / 10
+                document.querySelector('#user-review3 .rating h2 span').innerHTML = num / 10
+                if (num < 49) {
+                    document.querySelector('#user-review2 .rating h2 span').innerHTML = num / 10
+                }
+            } else {
+                clearInterval(int)
             }
-        } else {
-            clearInterval(int)
-        }
-    }, 25)
-}
+        }, 25)
+    }
 
-gsap.from('.user-review', {
-    // width:'20%',
-    transform: 'translateX(-40%)',
-    stagger: {
-        amount: 0.5
-    },
-    onStart:function(){
-        userRating()
-    },
-    duration: 0.7,
+    gsap.from('.user-review', {
+        // width:'20%',
+        transform: 'translateX(-40%)',
+        stagger: {
+            amount: 0.5
+        },
+        onStart: function () {
+            userRating()
+        },
+        duration: 0.7,
+        scrollTrigger: {
+            trigger: '.all-reviews',
+            start: 'top 60%',
+        }
+    })
+
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 450,
+        centeredSlides: true,
+        // freeMode: true,
+    });
+}
+page3Page4Animation()
+
+gsap.to(".scroll",{
+    transform:"translateX(-100%)",
+    duration:15,
+    ease:"none",
+    repeat:-1,
+
+})
+gsap.from("#page5",{
+    y:50,
+    duration:2,
     scrollTrigger:{
-        trigger:'.all-reviews',
-        start:'top 60%',
-        markers:true
+        trigger: '#page5',
+            start: 'top 50%',
+            markers:true,
+            stagger:2,
     }
 })
